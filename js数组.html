@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		var a=[1,2,'aa',true];
+		//alert(a);
+		console.log(a.indexOf('aa'));
+		//slice()对应String的subString版本，截取数组的部分元素
+		var b = a.slice(2);
+		console.log(b);
+		//如果slice中不指定参数，则截取整个数组，相当于拷贝数组
+		var c = a.slice();
+		console.log(c);
+		//push 向末尾添加元素，pop则把最后一个元素去掉
+		c.push('world');
+		console.log(c);
+		c.pop()
+		console.log(c);
+		c=[];
+		c.pop;
+		console.log(c);
+		//unshift向头部添加元素  shift去掉头部的元素
+		c=[1,2,'aa',true];
+		c.unshift('0');
+		console.log(c);
+		c.shift();
+		console.log(c);
+		//sort()对当前的数组进行排序，它会直接修改数组的元素位置
+		c=[3,5,2,1,6];
+		c.sort();
+		console.log(c);
+		//reverse()反转
+		console.log(c.reverse());
+		//splice()方法是修改数组的万能方法，它可以从指定的位置删除若干个元素
+		//然后在该位置起加入若干个元素
+		console.log(c.splice(2,3,5,6));
+		//从索引2开始删除3个元素，然后再插入两个元素
+		console.log(c);
+		//只添加，不删除
+		console.log(c.splice(2,0,4));//c.splice(2,0,4)显示删除的元素
+		console.log(c);
+		//concat()方法把当前的数组和另一个数组连起来并返回新的数组
+		var d=[5,4];
+		var e=c.concat(d);
+		console.log(e);
+		//concat()并没有改变了当前的数组，而是返回了一个新的数组
+		//join可以将数组中的每一个元素通过指定的符号连接起来
+		//若数组的元素不是字符串，将自动转换为字符串连接
+		console.log(e.join('-'));
+		//如果数组的一个元素又是数组，则该数组为多维数组
+		var f=[[1,2,3],[4,5],6];
+		console.log(f);
+		console.log(f[0][2]);
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

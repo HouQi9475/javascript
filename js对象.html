@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		//JS对象是一个无序的集合数据类型，由若干键值对组成
+		var leo={
+			name:'leo',
+			age:23,
+			sex:'man',
+			height:1.78,
+			weigth:72,
+			score:null,
+			'middle-school':'jie xiu yi zhong'
+		};
+		console.log('name:'+leo.name);
+		console.log('age:'+leo.age);
+		//访问属性是通过.操作符来完成的。前提是属性名是一个有效的变量名。如果属性名包含特殊符号，
+		//则需要用 '' 括起来。通过[]来访问
+		console.log('school:'+leo['middle-school']);
+		leo.girlFriend='chleo'; //给对象增加一个属性
+		console.log('gf:'+leo.girlFriend);
+		console.log(leo);
+		delete leo.sex; //删除对象的属性
+		console.log(leo);
+		console.log('score' in leo); //检查是否有某个属性
+		console.log('toString' in leo); //属性也可能是该对象继承来的
+		
+	</script>
+</head>
+<body>
+
+</body>
+</html>
