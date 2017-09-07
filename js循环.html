@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<title></title>
+	<script type="text/javascript">
+		//for循环的一个变体是for..in,可以把对象的属性循环输出
+		var person={
+			name: 'leo',
+			age: 23,
+			city: 'Tj'
+		};
+		for(var key in person){
+			console.log(key);
+		}
+		//要过滤到对象继承的属性，用hasownProperty()实现
+		for(key in person){
+			if(person.hasOwnProperty(key)){
+				console.log(key);
+			}
+		}
+		//由于array也是对象，所以他的索引被认为是对象的属性
+		var a=['A','B','C'];
+		for(var aa in a){
+			console.log(aa); // 输出的  0 1 2 是string不是number
+		}
+		//while计算100内奇数之和
+		var n=99;
+		var sum=0;
+		while(n>0){
+           sum=sum+n;
+           n=n-2;
+		}
+		console.log(sum);
+		//do..while
+		//while满足条件执行。do..while执行后判断是否满足条件
+		var m=0;
+		do{
+			m=m+1;
+		}while(m<100);
+		console.log(m);	
+	</script>
+</head>
+<body>
+
+</body>
+</html>
