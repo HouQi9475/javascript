@@ -18,6 +18,39 @@
  		for (var cc of c){
  			console.log(cc[0]+cc[1]);
  		}
+ 		//for..of 和 for..in的区别
+ 		//for..in遍历的是对象的熟悉名称。一个array数据实际上也是一个对象。它的每个元素的索引被视为属性
+ 		//当我们手动添加了属性用for..in输出后：
+ 		var arr=['A','B','C'];
+ 		arr.name='Leo';
+ 		for(var param in arr){
+ 			console.log(param);
+ 		}
+ 		//for..of只循环集合本身的元素
+ 		for(param of arr){
+ 			console.log(param);
+ 		}
+ 		//更好的方式是直接使用iterable内置的foreach方法，它接受一个函数，每次迭代就自动回调该函数
+ 		arr.forEach(function(element,index,array){
+ 			//element：指向当前元素的值
+ 			//index：指向当前索引
+ 			//array:指向Array对象本身
+ 			console.log(element);
+ 		})
+ 		//Set与Array类似，但Set没有索引，因此毁掉函数的前两个参数都是元素本身
+ 		var s=new Set(['H','O','U']);
+ 		s.forEach(function(element,sameElement,Set){
+ 			console.log(element);
+ 			console.log(sameElement);
+ 			console.log(Set);
+ 		})
+ 		//Map的回调函数参数依次为value,key和Map本身
+ 		var m=new Map([[1,'X'],[2,'Y'],[3,'Z']]);
+ 		m.forEach(function(value,key,map){
+ 			console.log(value);
+ 			console.log(key);
+ 			console.log(map);
+ 		})
 	</script>
 </head>
 <body>
